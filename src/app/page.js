@@ -13,11 +13,11 @@ function Home() {
   const [response, setResponse] = React.useState("");
 
   function handleSubmit(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     const isCorrect = code === CORRECT_CODE;
 
-    setResponse(
+    alert(
       isCorrect
         ? "https://hypernotepad.com/n/3d47c4a246347785"
         : "Try again later"
@@ -32,7 +32,8 @@ function Home() {
         <div className="row">
           <input
             id="auth-code"
-            type="password"
+            type="text"
+            autoComplete="off"
             required={true}
             maxLength={60}
             value={code}
