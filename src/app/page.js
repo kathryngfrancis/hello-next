@@ -46,7 +46,7 @@ function Home() {
         </div>
       </form>
 
-      <form name="contact" data-netlify="true">
+      <form name="contact" netlify="true">
         <p>
           <label>
             Name <input type="text" name="name" />
