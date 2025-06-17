@@ -36,7 +36,7 @@ function Home() {
             name="guess"
             autoComplete="off"
             required={true}
-            maxLength={60}
+            maxLength={50}
             value={code}
             onChange={(event) => {
               setCode(event.target.value);
