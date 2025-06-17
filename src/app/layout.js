@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './styles.css';
+import "./styles.css";
 
 function RootLayout({ children }) {
   return (
@@ -8,6 +8,9 @@ function RootLayout({ children }) {
       <body>
         {children}
 
+        <form name="makeGuess" method="POST" data-netlify="true" hidden>
+          <input type="text" name="guess" />
+        </form>
       </body>
     </html>
   );

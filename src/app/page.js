@@ -28,7 +28,7 @@ function Home() {
     <main>
       <h1>Hello There Next!</h1>
 
-      <form name="makeGuess" onSubmit={handleSubmit} data-netlify="true">
+      <form name="makeGuess" onSubmit={handleSubmit}>
         <div className="row">
           <input
             id="auth-code"
@@ -46,21 +46,6 @@ function Home() {
         </div>
       </form>
 
-      <form name="contact" data-netlify="true">
-        <p>
-          <label>
-            Name <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Email <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
       <p>{response}</p>
     </main>
   );
