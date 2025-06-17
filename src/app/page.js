@@ -28,7 +28,7 @@ function Home() {
     <main>
       <h1>Hello There Next!</h1>
 
-      <form name="makeGuess" onSubmit={handleSubmit} netlify>
+      <form name="makeGuess" onSubmit={handleSubmit} data-netlify="true">
         <div className="row">
           <input
             id="auth-code"
