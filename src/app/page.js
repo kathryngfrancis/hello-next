@@ -33,6 +33,7 @@ function Home() {
           <input
             id="auth-code"
             type="text"
+            name="guess"
             autoComplete="off"
             required={true}
             maxLength={60}
