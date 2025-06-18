@@ -1,52 +1,20 @@
 "use client";
 import React from "react";
+import GuessTaker from "./guessTaker";
+import HitCounter from "./HitCounter";
 
 /* 
 
 
 */
 
-const CORRECT_CODE = "Fancy Like";
-
 function Home() {
-  const [code, setCode] = React.useState("");
-  const [response, setResponse] = React.useState("");
-
-  function handleSubmit(event) {
-    // event.preventDefault();
-
-    const isCorrect = code === CORRECT_CODE;
-
-    alert(
-      isCorrect
-        ? "https://hypernotepad.com/n/3d47c4a246347785"
-        : "Try again later"
-    );
-  }
-
   return (
     <main>
       <h1>Hello There Next!</h1>
 
-      <form name="makeGuess" onSubmit={handleSubmit}>
-        <div className="row">
-          <input
-            id="auth-code"
-            type="text"
-            name="guess"
-            autoComplete="off"
-            required={true}
-            maxLength={50}
-            value={code}
-            onChange={(event) => {
-              setCode(event.target.value);
-            }}
-          />
-          <button type="submit">Validate</button>
-        </div>
-      </form>
-
-      <p>{response}</p>
+      <GuessTaker></GuessTaker>
+      <HitCounter></HitCounter>
     </main>
   );
 }
