@@ -11,7 +11,7 @@ import HitCounter from "./HitCounter";
 function Home() {
   return (
     <main>
-      <h1>Hello World!</h1>
+      <h1>Hello There Next!</h1>
 
       <GuessTaker></GuessTaker>
       <HitCounter></HitCounter>
