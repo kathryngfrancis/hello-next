@@ -22,7 +22,7 @@ export default function GuessTaker() {
 
   return (
     <div>
-      <p>What do you say before a debut?</p>
+      <p>What do you say right before a debut?</p>
       <form name="makeGuess" onSubmit={handleSubmit}>
         <div className="row">
           <input
@@ -45,12 +45,11 @@ export default function GuessTaker() {
           <a href="https://hypernotepad.com/n/3d47c4a246347785">
             https://hypernotepad.com/n/3d47c4a246347785
           </a>
-          <p>Password: Fancy Like</p>
         </div>
       )}
       {showHint && (
         <div>
-          <p>Nope, try again. Something deleted.</p>
+          <p>Nope, try again. Hint: It's a clarification.</p>
         </div>
       )}
     </div>
