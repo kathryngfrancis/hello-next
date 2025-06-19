@@ -15,7 +15,7 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB7quC6JulftMFOUKrejnQP9TYTyVq89iU",
+  apiKey: process.env.FIREBASE_API_KEY,
 
   authDomain: "test-firestore-a9bee.firebaseapp.com",
 
