@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import GuessTaker from "./guessTaker";
 import HitCounter from "./HitCounter";
 
 /* 
