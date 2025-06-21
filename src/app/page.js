@@ -15,7 +15,8 @@ function Home() {
         https://hypernotepad.com/n/3d47c4a246347785
       </a>
       <p>
-        The password is the song that came before debut. It was a clarification.
+        The password is the song that came before debut. I think it was meant to
+        be a clarification. Test.
       </p>
       <HitCounter></HitCounter>
     </main>
