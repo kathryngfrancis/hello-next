@@ -16,7 +16,7 @@ function Home() {
       </a>
       <p>
         The password is the song that came before debut. I think it was meant to
-        be a clarification. Test.
+        be a clarification.
       </p>
       <HitCounter></HitCounter>
     </main>
