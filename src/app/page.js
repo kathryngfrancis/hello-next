@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import HitCounter from "./HitCounter";
+import GuessTaker from "./guessTaker";
 
 /* 
 
@@ -10,8 +11,12 @@ import HitCounter from "./HitCounter";
 function Home() {
   return (
     <main>
-      <p>I'm thinking. Come back later.</p>
-
+      <a href="https://hypernotepad.com/n/3d47c4a246347785">
+        https://hypernotepad.com/n/3d47c4a246347785
+      </a>
+      <p>
+        The password is the song that came before debut. It was a clarification.
+      </p>
       <HitCounter></HitCounter>
     </main>
   );

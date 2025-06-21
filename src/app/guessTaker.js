@@ -22,7 +22,6 @@ export default function GuessTaker() {
 
   return (
     <div>
-      <p>What do you say right before a debut?</p>
       <form name="makeGuess" onSubmit={handleSubmit}>
         <div className="row">
           <input
