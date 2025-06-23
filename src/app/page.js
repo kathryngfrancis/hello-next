@@ -15,8 +15,8 @@ function Home() {
         https://hypernotepad.com/n/3d47c4a246347785
       </a>
       <p>
-        The password is the song that came before debut. I think it was meant to
-        be a clarification.
+        The password is the thing you say right before a debut. I think it's
+        meant as a clarification for the audience so they won't be confused.
       </p>
       <HitCounter></HitCounter>
     </main>
