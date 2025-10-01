@@ -50,12 +50,20 @@ async function addHit() {
     await addDoc(logRef, {
       timestamp: serverTimestamp(),
     });
+
+    // Step 3: Return the doc id
+    const docIdSnap = await getDoc(doc(db, "facts", "link"));
+    if (docIdSnap.exists()) {
+      console.log(docIdSnap.data());
+      return docIdSnap.data().docId;
+    }
+    return "error";
   } catch (err) {
-    console.error("Error tracking hit:", err);
+    return "error";
   }
 }
 
-async function addGuess(guess) {
+async function addGuess(guess, isCorrect) {
   try {
     // Log guess with timestamp
     const logRef = collection(db, "guesses");
@@ -63,8 +71,9 @@ async function addGuess(guess) {
       timestamp: serverTimestamp(),
       guess: guess,
     });
+    return isCorrect;
   } catch (err) {
-    console.error("Error adding guess:", err);
+    return "error";
   }
 }
 

@@ -1,14 +1,15 @@
 // src/HitCounter.js
-import { useEffect } from "react";
+"use client";
+import { useEffect, useState } from "react";
 
 import { addHit } from "../firebase";
 
-function HitCounter() {
+function HitCounter({ docId }) {
   useEffect(() => {
     addHit();
   }, []);
 
-  return null; // This doesn't render anything, it just does the update
+  return <p>{`Note: ${docId}`}</p>;
 }
 
 export default HitCounter;

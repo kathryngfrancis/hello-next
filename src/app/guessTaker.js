@@ -2,20 +2,26 @@
 import React from "react";
 import { addGuess } from "../firebase";
 
-const CORRECT_CODE = "Fancy Like";
+const CORRECT_CODE = "Who Let The Dogs Out";
 
-export default function GuessTaker() {
+export default function GuessTaker({ docId }) {
   const [code, setCode] = React.useState("");
-  const [showHint, setShowHint] = React.useState(false);
-  const [showLink, setShowLink] = React.useState(false);
+  const [textBelow, setTextBelow] = React.useState("");
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    addGuess(code);
+    let newtb = "";
+    if (code === CORRECT_CODE) newtb = "yes";
+    else if (
+      code.toLowerCase().replaceAll(" ", "") ===
+      CORRECT_CODE.toLowerCase().replaceAll(" ", "")
+    )
+      newtb = "case and spaces";
+    else newtb = "no";
 
-    const isCorrect = code === CORRECT_CODE;
-    setShowLink(isCorrect);
-    setShowHint(!isCorrect);
+    const confirmedTextBelow = await addGuess(code, newtb);
+
+    setTextBelow(confirmedTextBelow);
 
     setCode("");
   }
@@ -34,23 +40,22 @@ export default function GuessTaker() {
             value={code}
             onChange={(event) => {
               setCode(event.target.value);
+              setTextBelow("");
             }}
           />
-          <button type="submit">Guess</button>
+          <button type="submit">Test</button>
         </div>
       </form>
-      {showLink && (
-        <div>
-          <a href="https://hypernotepad.com/n/3d47c4a246347785">
-            https://hypernotepad.com/n/3d47c4a246347785
-          </a>
-        </div>
-      )}
-      {showHint && (
-        <div>
-          <p>Nope, try again. Hint: It's a clarification.</p>
-        </div>
-      )}
+      <div>
+        <p>{textBelow}</p>
+        {textBelow === "yes" && (
+          <p>
+            <a href={`https://hypernotepad.com/n/${docId}`}>
+              hypernotepad.com/n/{docId}
+            </a>
+          </p>
+        )}
+      </div>
     </div>
   );
 }
