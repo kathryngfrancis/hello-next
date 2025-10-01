@@ -51,13 +51,7 @@ async function addHit() {
       timestamp: serverTimestamp(),
     });
 
-    // Step 3: Return the doc id
-    const docIdSnap = await getDoc(doc(db, "facts", "link"));
-    if (docIdSnap.exists()) {
-      console.log(docIdSnap.data());
-      return docIdSnap.data().docId;
-    }
-    return "error";
+    return "done";
   } catch (err) {
     return "error";
   }
