@@ -9,7 +9,7 @@ function HitCounter({ docId }) {
     addHit();
   }, []);
 
-  return <p>{`Note: ${docId}`}</p>;
+  return <p>Come back later</p>;
 }
 
 export default HitCounter;
