@@ -15,6 +15,8 @@ The password is the thing you say right before a debut. I think it's
         https://hypernotepad.com/n/596b5c3afd13942d
       </a>
       <p>The password is AbleHeart. (no space)</p>
+
+      <GuessTaker docId={DOC_ID}></GuessTaker>
       */
 
 const DOC_ID = "b5861aa4f157003f";
@@ -23,7 +25,6 @@ function Home() {
   return (
     <main>
       <HitCounter docId={DOC_ID}></HitCounter>
-      <GuessTaker docId={DOC_ID}></GuessTaker>
     </main>
   );
 }
